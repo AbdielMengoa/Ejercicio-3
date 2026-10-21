@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Tribunal de la Reina</title>
+  <link rel="stylesheet" href="estilos-reina.css">
+</head>
+<body>
+
+  <div class="tarjeta-juego" id="tarjetaReina">
+    <header class="encabezado">
+      <span class="insignia">Capítulo VIII</span>
+      <h2>El Tribunal Real</h2>
+      <p>Evita enfurecer a la Reina durante el juicio.</p>
+    </header>
+
+    <!-- Barra de Ira de la Reina -->
+    <div class="ira-contenedor">
+      <div class="ira-header">
+        <span>Nivel de Ira Real:</span>
+        <span id="porcentajeIra">0%</span>
+      </div>
+      <div class="ira-barra-bg">
+        <div id="iraBarra" class="ira-barra-fill"></div>
+      </div>
+    </div>
+
+    <form id="formReina" onsubmit="event.preventDefault();">
+      <div class="campo-grupo">
+        <label for="falta">Incidente cometido:</label>
+        <select id="falta">
+          <option value="tarde">Llegar 1 segundo tarde</option>
+          <option value="erizo">Dejar escapar al erizo-bola</option>
+          <option value="sonrisa">Mirar al Gato de Cheshire</option>
+          <option value="tartas">Robar las tartas de la Reina</option>
+        </select>
+      </div>
+
+      <button type="button" id="btnReina">Emitir Sentencia 👑</button>
+    </form>
+
+    <div class="consola-resultado" id="resReina">
+      <span class="icono">📜</span>
+      <p id="textoReina">"¡Que empiece el juicio!", ordena el Rey de Corazones.</p>
+    </div>
+  </div>
+
+  <script src="codigo-reina.js"></script>
+</body>
+</html>
